@@ -1,0 +1,9 @@
+<h2>List</h2>
+<button (click)="add()">Add</button>
+<ul>
+  @for(todo of todos(); track todo.id) {
+    <li [style]="{textDecoration: todo.completed ? 'line-through' : ''}">
+      {{ todo.title }}
+    </li>
+  }
+</ul>
